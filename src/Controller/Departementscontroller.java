@@ -1,5 +1,4 @@
 package Controller;
-import DatabaseConnexion.DepartementDatabase;
 import Modules.Departement;
 import Modules.Enseignant;
 import Modules.Etudiant;

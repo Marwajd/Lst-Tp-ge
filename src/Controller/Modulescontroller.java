@@ -51,6 +51,8 @@ public class Modulescontroller{
             }}
             System.out.println("");
         }}
+
+
     public static void ajouterModules() {
         String intitule = Main.getStringInput("Saisir l'intitulé du Modules :");
         Enseignantscontroller.afficherEnseignants();
@@ -80,6 +82,8 @@ public class Modulescontroller{
         }
         afficherMenu();
     }
+
+
     public static void modifierModules() {
         afficherModules();
         int id = Main.getIntInput("Entrer un ID du module à modifier :");
@@ -101,6 +105,7 @@ public class Modulescontroller{
         }
         afficherMenu();
     }
+
 
     public static void supprimerModules() {
         afficherModules();

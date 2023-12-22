@@ -5,7 +5,6 @@ import Modules.Departement;
 import Modules.Enseignant;
 import Modules.Etudiant;
 
-import java.sql.*;
 import java.util.ArrayList;
 public class Departementsservices {
 
@@ -30,6 +29,8 @@ public class Departementsservices {
         }
         return null; // Aucun étudiant trouvé pour cet ID
     }
+
+
     public static ArrayList<Departement> supprimerDepartementParId(int id) {
         Configuration.departements.remove(getDeptById(id));
         return Configuration.departements;
@@ -42,7 +43,7 @@ public class Departementsservices {
                     return departement;
                 }
             }
-            return null; // Retourne null si aucun département correspondant à l'ID n'est trouvé
+            return null; // Retourne null si aucun département correspondant à l'ID
         }
 
         public static ArrayList<Departement> getAllDepartements() {

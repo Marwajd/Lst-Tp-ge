@@ -57,6 +57,7 @@ public class Enseignantscontroller {
             }
             System.out.println(""); // Saut de ligne pour chaque enseignant
         }}
+
         public static void ajouterEnseignant(){
             String nom = Main.getStringInput("Entrez le nom :");
             String prenom = Main.getStringInput("Entrez le  prenom :");
@@ -78,6 +79,7 @@ public class Enseignantscontroller {
             }
             afficherMenu();
         }
+
     public static void modifierEnseignant() {
         afficherEnseignants();
         int id = Main.getIntInput("Sélectionnez un enseignant par ID :");

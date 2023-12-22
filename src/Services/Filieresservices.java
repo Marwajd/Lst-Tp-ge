@@ -28,7 +28,7 @@ public class Filieresservices {
                 return filiere;
             }
         }
-        return null; // Aucun étudiant trouvé pour cet ID
+        return null;
     }
 
     public static ArrayList<Filieres> supprimerFlById(int id){

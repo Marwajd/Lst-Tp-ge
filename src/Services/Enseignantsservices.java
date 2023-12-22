@@ -12,11 +12,20 @@ public class Enseignantsservices{
         enseignant.setPrenom(prenom);
         enseignant.setGrade(grade);
         enseignant.setEmail(email);
-        enseignant.setDepartement(departement);
+        enseignant.setDepartement(departement); // Assurez-vous que le département n'est pas null
         enseignant.setId(Configuration.getEnsId());
-        Configuration.enseignants.add(enseignant);
-        return enseignant;
+
+        // Ajoutez l'enseignant à la liste d'enseignants uniquement si le département est valide
+        if (departement != null) {
+            Configuration.enseignants.add(enseignant);
+            return enseignant;
+        } else {
+            System.out.println("Département non valide lors de l'ajout d'enseignant.");
+            return null; // Ou une autre logique de retour appropriée en cas d'erreur
+        }
     }
+
+    // ... autres méthode
 
     public static Enseignant modifierEns(int id, String nom, String prenom, String email, String grade, Departement departement) {
         for (Enseignant enseignant : Configuration.enseignants) {

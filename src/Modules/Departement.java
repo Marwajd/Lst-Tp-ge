@@ -6,7 +6,19 @@ public class Departement {
     private int id;
     private String intitule;
     private Enseignant responsable;
+    private int respo;
     ArrayList<Filieres> filieres = new ArrayList<Filieres>();
+
+    public Departement() {
+    }
+
+    public Departement(String intitule, Enseignant responsable) {
+        this.intitule=intitule;
+        this.responsable=responsable;
+    }
+
+
+
 
     //les constructeurs
 

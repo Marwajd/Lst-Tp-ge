@@ -31,7 +31,7 @@ public class Etudiantsservices {
                 return etudiant;
             }
         }
-        return null; // Aucun étudiant trouvé pour cet ID
+        return null;
     }
 
     public static ArrayList<Etudiant> supprimerEtdById(int id) {
@@ -47,6 +47,7 @@ public class Etudiantsservices {
         }
         return Configuration.etudiants; // Retourne la liste mise à jour des étudiants
     }
+
     public static Etudiant getEtdById(int id) {
         for (Etudiant etudiant : Configuration.etudiants) {
             if (etudiant.getId() == id) {
@@ -55,6 +56,8 @@ public class Etudiantsservices {
         }
         return null;
     }
+
+
 
     public static ArrayList<Etudiant> getAllEtd() {
         return Configuration.etudiants;

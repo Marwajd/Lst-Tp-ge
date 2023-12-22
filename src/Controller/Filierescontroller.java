@@ -61,6 +61,8 @@ public class Filierescontroller {
         afficherMenu();
 
     }
+
+
     public static void afficherFilieres() {
         for (Filieres filiere : Configuration.filieres) {
             System.out.print("ID : " + filiere.getId() + " | ");
@@ -83,6 +85,8 @@ public class Filierescontroller {
             System.out.println(""); // Saut de ligne pour chaque filière
         }
     }
+
+
     public static void modifierFilieres() {
         int id = Main.getIntInput("Entrer l'ID de la filière à modifier: ");
         Filieres filiereAModifier = Filieresservices.getFlById(id);

@@ -87,6 +87,7 @@ public static void afficherEtudiant(){
             System.out.println("");
         }
     }
+
     public static void modifierEtudiant(){
         afficherEtudiant();
         int id = Main.getIntInput("Entrer l'ID de l'etudiant à modifier: ");
@@ -105,6 +106,7 @@ public static void afficherEtudiant(){
         afficherEtudiant();
         afficherMenu();
     }
+
     public static void supprimerEtudiant(){
         afficherEtudiant();
         int id = Main.getIntInput("Entrer l'ID de l'étudiant à supprimer :");

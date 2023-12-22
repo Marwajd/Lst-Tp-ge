@@ -1,14 +1,7 @@
 package Services;
-import java.sql.*;
 import Controller.*;
-import DatabaseConnexion.DepartementDatabase;
-import DatabaseConnexion.DepartentConnection;
 import Modules.*;
 import Services.Configuration;
-
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -95,7 +88,7 @@ public static String getStringInput(String... msg){
        // enseignant.setDepartement(enseignant.getDepartement());
         enseignant.setId(Configuration.getEnsId());
         Configuration.enseignants.add(enseignant);
-
+            //creation de departement
         Departement D1 = new Departement();
         D1.setIntitule("GEGM");
         D1.setresponsable(enseignant);
@@ -124,11 +117,10 @@ public static String getStringInput(String... msg){
         module.setIntitule("POO");
         module.setFiliere(F1);
         module.setProfesseur(enseignant);
-        //bd
-        Departement dept = new Departement();
-        dept.setIntitule("Informatique");
-        dept.setresponsable(enseignant);
 
         //Affichage du menu principal
-      affichermenuprincipale();}}
+
+      affichermenuprincipale();
+    }
+}
 

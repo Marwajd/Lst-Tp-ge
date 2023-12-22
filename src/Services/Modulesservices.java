@@ -20,7 +20,7 @@ public class Modulesservices{
             module.setFiliere(filiere);
         }
 
-        // Génération de l'ID pour le module
+
         module.setId(Configuration.getModId());
 
         // Ajout à la liste
@@ -37,7 +37,7 @@ public class Modulesservices{
                 return module;
             }
         }
-        return null; // Retourne null si le module à modifier n'est pas trouvé
+        return null;
     }
     public static ArrayList<Modules> supprimerModuleById(int id) {
         Modules moduleASupprimer = getModuleById(id);
@@ -53,7 +53,7 @@ public class Modulesservices{
                     return module;
                 }
             }
-            return null; // Retourne null si aucun département correspondant à l'ID n'est trouvé
+            return null; // Retourne null si aucun département correspondant à l'ID
         }
 
     public static ArrayList<Modules> getAllModule(){
